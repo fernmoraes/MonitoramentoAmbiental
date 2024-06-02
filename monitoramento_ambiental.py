@@ -42,29 +42,55 @@ def exibir_relatorio_residuos():
         print(f"Data: {registro['data']}, Tipo: {registro['tipo']}, Quantidade: {registro['quantidade']} kg")
         print("")
 
-# Exemplo de uso do projeto
+# Criação de um Menu
+while(True):
+    print("---Menu---")
+    print("[1] Monitoramento da Qualidade da Água")
+    print("[2] Monitoramento dos Resíduos")
+    print("[3] Sair")
+    escolha = int(input("Insira a opção desejada: "))
 
-# Registrando dados de monitoramento ambiental
-print("Monitoramento da Qualidade da Água")
+    while escolha != 1 and escolha != 2 and escolha != 3:
+        print("opção inválida!")
+        print("")
+        print("---Menu---")
+        print("[1] Monitoramento da Qualidade da Água")
+        print("[2] Monitoramento dos Resíduos")
+        print("[3] Sair")
+        escolha = int(input("Insira a opção desejada: "))
+
+    
+    if escolha == 1:
+        # Registrando dados de monitoramento ambiental
+        print("")
+        print("Monitoramento da Qualidade da Água")
+        print("")
+        data_Agua = input("Insira a data: ")
+        local_Agua = input("Insira o local: ")
+        pH = float(input("Insira o pH: "))
+        turbidez = input("Insira a turbidez: ")
+        hidrocarbonetos = float(input("Insira os hidrocarbonetos: "))
+        registrar_monitoramento(data_Agua, local_Agua, pH, turbidez, hidrocarbonetos)
+
+        # Exibindo relatório de monitoramento ambiental
+
+        exibir_relatorio_monitoramento()
+
+    if escolha == 2:    
+        # Registrando dados de gestão de resíduos
+        print("")
+        print("Monitoramento dos Resíduos")
+        print("")
+        data_Residuos = input("Insira a data: ")
+        tipo_Residuo = input("Insira o tipo do resíduo na água: ")
+        quantidade_Residuo = float(input("Insira a quantidade aproximada de resíduos (em Kg): "))
+        registrar_residuo(data_Residuos, tipo_Residuo, quantidade_Residuo)
+
+        # Exibindo relatório de gestão de resíduos
+        exibir_relatorio_residuos()
+    
+    if escolha == 3:
+        break
+
 print("")
-data_Agua = input("Insira a data: ")
-local_Agua = input("Insira o local: ")
-pH = float(input("Insira o pH: "))
-turbidez = input("Insira a turbidez: ")
-hidrocarbonetos = float(input("Insira os hidrocarbonetos: "))
-registrar_monitoramento(data_Agua, local_Agua, pH, turbidez, hidrocarbonetos)
-
-# Exibindo relatório de monitoramento ambiental
-
-exibir_relatorio_monitoramento()
-
-# Registrando dados de gestão de resíduos
-print("Monitoramento dos Resíduos")
-print("")
-data_Residuos = input("Insira a data: ")
-tipo_Residuo = input("Insira o tipo do resíduo na água: ")
-quantidade_Residuo = float(input("Insira a quantidade aproximada de resíduos (em Kg): "))
-registrar_residuo(data_Residuos, tipo_Residuo, quantidade_Residuo)
-
-# Exibindo relatório de gestão de resíduos
-exibir_relatorio_residuos()
+print("---Programa Finalizado---")
