@@ -22,6 +22,23 @@ def exibir_relatorio_monitoramento():
 
 # Gestão de Resíduos
 
+gestao_residuos = [] # Lista para armazenar dados de resíduos
+
+# Função para registrar resíduos gerados
+def registrar_residuo(data, tipo, quantidade):
+    registro = {
+        "data": data,
+        "tipo": tipo,
+        "quantidade": quantidade
+    }
+    gestao_residuos.append(registro)
+
+# Função para exibir relatórios de gestão de resíduos
+def exibir_relatorio_residuos():
+    print("Relatório de Gestão de Resíduos")
+    for registro in gestao_residuos:
+        print(f"Data: {registro['data']}, Tipo: {registro['tipo']}, Quantidade: {registro['quantidade']} kg")
+
 # Exemplo de uso do projeto
 
 # Registrando dados de monitoramento ambiental
