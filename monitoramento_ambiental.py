@@ -63,7 +63,8 @@ while(True):
     if escolha == 1:
         # Registrando dados de monitoramento ambiental
         print("")
-        print("Monitoramento da Qualidade da Água")
+        print("--Monitoramento da Qualidade da Água--")
+        print("-Esses dados serão salvos-")
         print("")
         data_Agua = input("Insira a data: ")
         local_Agua = input("Insira o local: ")
@@ -79,7 +80,8 @@ while(True):
     if escolha == 2:    
         # Registrando dados de gestão de resíduos
         print("")
-        print("Monitoramento dos Resíduos")
+        print("--Monitoramento dos Resíduos--")
+        print("-Esses dados serão salvos-")
         print("")
         data_Residuos = input("Insira a data: ")
         tipo_Residuo = input("Insira o tipo do resíduo na água: ")
