@@ -221,3 +221,10 @@ Este projeto está licenciado sob a [MIT License](LICENSE).
 ## Contato
 
 Se você tiver alguma dúvida, entre em contato através do email: rm555080@fiap.com.br
+
+## Alunos
+
+Fernando Navajas RM555080
+Henrique Botti RM556187
+Pedro Ferrari RM554887
+
